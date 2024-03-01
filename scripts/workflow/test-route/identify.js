@@ -4,7 +4,13 @@ const allowedUser = new Set(['dependabot[bot]', 'pull[bot]']); // dependabot and
 module.exports = async ({ github, context, core }, body, number, sender) => {
     core.debug(`sender: ${sender}`);
     core.debug(`body: ${body}`);
+<<<<<<< HEAD
     const m = body.match(/```routes\s+([\S\s]*?)```/);
+=======
+    // Remove all HTML comments before performing the match
+    const bodyNoCmts = body.replaceAll(/<!--[\S\s]*?-->/g, '');
+    const m = bodyNoCmts.match(/```routes\s+([\S\s]*?)```/);
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
     core.debug(`match: ${m}`);
     let res = null;
 

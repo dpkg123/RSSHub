@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'Route: v1':
 - changed-files:
   - any-glob-to-any-file: ['lib/router.js']
@@ -11,6 +12,21 @@ core enhancement:
 - changed-files:
   - any-glob-to-any-file: ['lib/routes/index.js']
   - all-globs-to-any-file: ['lib/**', '!lib/radar-rules.js', '!/lib/config.js', '!lib/router.js', '!lib/routes/**', '!lib/v2/**']
+=======
+'Route: deprecated':
+- changed-files:
+  - any-glob-to-any-file: ['lib/router.js']
+  - all-globs-to-any-file: ['lib/routes-deprecated/**/*.js', '!lib/routes-deprecated/index.js']
+
+'Route':
+- changed-files:
+  - any-glob-to-any-file: ['lib/routes/**/*.js']
+
+core enhancement:
+- changed-files:
+  - any-glob-to-any-file: ['lib/routes/index.ts']
+  - all-globs-to-any-file: ['lib/**', '!/lib/config.ts', '!lib/routes/**']
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 dependencies:
 - changed-files:

@@ -63,9 +63,15 @@ sidebar_position: 2
 -   Use `kebab-case` for files and folders.
 -   Use `CONSTANT_CASE` for constants.
 
+<<<<<<< HEAD
 ## v2 Route Standard
 
 When creating a new route in RSSHub, you need to organize your files in a specific way. Your namespace folder should be stored in the `lib/v2` directory and should include three mandatory files:
+=======
+## Route Standard
+
+When creating a new route in RSSHub, you need to organize your files in a specific way. Your namespace folder should be stored in the `lib/routes` directory and should include three mandatory files:
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 -   `router.js` Registers the routes
 -   `maintainer.js` Provides information about the route maintainer
@@ -74,7 +80,11 @@ When creating a new route in RSSHub, you need to organize your files in a specif
 Your namespace folder structure should look like this:
 
 ```
+<<<<<<< HEAD
 ├───lib/v2
+=======
+├───lib/routes
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 │   ├───furstar
 │       ├─── templates
 │           ├─── description.art
@@ -87,7 +97,11 @@ Your namespace folder structure should look like this:
 ...
 ```
 
+<<<<<<< HEAD
 **All eligible routes under the `lib/v2` path will be automatically loaded without the need for updating the `lib/router.js`.**
+=======
+**All eligible routes under the `lib/routes` path will be automatically loaded without the need for updating the `lib/router.js`.**
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ### Namespace
 
@@ -100,20 +114,32 @@ RSSHub appends the name of all route namespace folders in front of the actual ro
 
 ### Registering a Route
 
+<<<<<<< HEAD
 To register a route, the `router.js` file should export a method that provides a `@koa/router` object when initializing the route.
+=======
+To register a route, the `router.js` file should export a method that provides a  Hoho route handler.
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ### Maintainer List
 
 The `maintainer.js` file should export an object that provides maintainer information related to the route, including:
 
+<<<<<<< HEAD
 -   Key: Corresponding path in the `@koa/router` object
+=======
+-   Key: Corresponding route path
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 -   Value: Array of string, including all maintainers' GitHub ID.
 
 To generate a list of maintainers, use the following command: `pnpm run build:maintainer`, which will create the list under `assets/build/`.
 
 :::danger
 
+<<<<<<< HEAD
 The path in the `@koa/router` object should be the same as the `path` in the corresponding documentation before the namespace appended in front of it.
+=======
+The path should be the same as the `path` in the corresponding documentation before the namespace appended in front of it.
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 :::
 
@@ -137,7 +163,11 @@ All templates should be placed in the namespace's `templates` folder with the `.
 
 #### Example
 
+<<<<<<< HEAD
 Here's an example taken from the [furstar](https://github.com/DIYgod/RSSHub/blob/master/lib/v2/furstar) namespace:
+=======
+Here's an example taken from the [furstar](https://github.com/DIYgod/RSSHub/blob/master/lib/routes/furstar) namespace:
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ```html
 <div>
@@ -151,8 +181,13 @@ Here's an example taken from the [furstar](https://github.com/DIYgod/RSSHub/blob
 ```
 
 ```js
+<<<<<<< HEAD
 const path = require('path');
 const { art } = require('@/utils/render');
+=======
+import * as path from 'node:path';
+import { art } from '@/utils/render';
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 const renderAuthor = (author) => art(path.join(__dirname, 'templates/author.art'), author);
 ```
 
@@ -160,6 +195,10 @@ const renderAuthor = (author) => art(path.join(__dirname, 'templates/author.art'
 
 :::danger
 
+<<<<<<< HEAD
 The v1 Route Standard is deprecated. All new routes should be following the [v2 Route Standard](/joinus/advanced/script-standard#v2-route-standard).
+=======
+The v1 Route Standard is deprecated. All new routes should be following the [Route Standard](/joinus/advanced/script-standard#route-standard).
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 :::

@@ -7,7 +7,10 @@ on:
     paths:
       - 'assets/radar-rules.js'
       - 'lib/**/maintainer.js'
+<<<<<<< HEAD
       - 'lib/**/radar-rules.js'
+=======
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
       - 'lib/**/radar.js'
 
 permissions:
@@ -24,7 +27,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install pnpm
+<<<<<<< HEAD
         uses: pnpm/action-setup@v2
+=======
+        uses: pnpm/action-setup@v3
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
         with:
           version: 8
       - name: Use Node.js Active LTS

@@ -21,11 +21,19 @@
     "@docusaurus/plugin-client-redirects": "3.1.1",
     "@docusaurus/plugin-pwa": "3.1.1",
     "@docusaurus/preset-classic": "3.1.1",
+<<<<<<< HEAD
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.0",
     "markdown-it": "^14.0.0",
     "meilisearch-docsearch": "^0.6.0",
     "pinyin-pro": "3.19.3",
+=======
+    "@mdx-js/react": "^3.0.1",
+    "clsx": "^2.1.0",
+    "markdown-it": "^14.0.0",
+    "meilisearch-docsearch": "^0.6.0",
+    "pinyin-pro": "3.19.6",
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
     "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -36,8 +44,13 @@
     "@docusaurus/types": "3.1.1",
     "@types/markdown-it": "^13.0.7",
     "@types/mdx-js__react": "^1.5.8",
+<<<<<<< HEAD
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+=======
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
     "typescript": "^5.3.3"
   },
   "browserslist": {

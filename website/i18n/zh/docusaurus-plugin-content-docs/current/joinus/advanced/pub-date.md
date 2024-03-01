@@ -29,7 +29,11 @@ sidebar_position: 4
 RSSHub 工具类包括了一个 [day.js](https://github.com/iamkun/dayjs) 的包装函数，它允许你直接解析日期字符串并在大多数情况下获得一个 [Date 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)。
 
 ```js
+<<<<<<< HEAD
 const { parseDate } = require('@/utils/parse-date');
+=======
+import { parseDate } from '@/utils/parse-date';
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 const pubDate = parseDate('2020/12/30');
 // 或
@@ -45,7 +49,11 @@ const pubDate = parseDate('2020/12/30', 'YYYY/MM/DD');
 如果你需要解析相对日期，请使用 `parseRelativeDate`。
 
 ```js
+<<<<<<< HEAD
 const { parseRelativeDate } = require('@/utils/parse-date');
+=======
+import { parseRelativeDate } from '@/utils/parse-date';
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 const pubDate = parseRelativeDate('2天前');
 const pubDate = parseRelativeDate('前天 15:36');
@@ -58,7 +66,11 @@ const pubDate = parseRelativeDate('前天 15:36');
 要在代码中手动指定时区，可以使用以下代码：
 
 ```js
+<<<<<<< HEAD
 const timezone = require('@/utils/timezone');
+=======
+import timezone from '@/utils/timezone';
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 const pubDate = timezone(parseDate('2020/12/30 13:00'), +1);
 ```

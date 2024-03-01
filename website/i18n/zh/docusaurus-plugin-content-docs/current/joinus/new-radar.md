@@ -8,7 +8,11 @@ sidebar_position: 3
 
 ## 编写规则
 
+<<<<<<< HEAD
 要制作新的 RSSHub Radar 规则，需要在 `/lib/v2/` 目录下，相应的域名空间创建 `radar.js` 文件。下面以制作 `GitHub 仓库 Issues` 的 RSS 源为例，详见此处。编写的代码应如下所示：
+=======
+要制作新的 RSSHub Radar 规则，需要在 `/lib/routes/` 目录下，相应的域名空间创建 `radar.js` 文件。下面以制作 `GitHub 仓库 Issues` 的 RSS 源为例，详见此处。编写的代码应如下所示：
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ```js
 module.exports = {

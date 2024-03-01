@@ -9,7 +9,10 @@ on:
       - 'lib/**'
       - '!**/maintainer.js'
       - '!**/radar.js'
+<<<<<<< HEAD
       - '!**/radar-rules.js'
+=======
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
       - 'package.json'
       - 'pnpm-lock.yaml'
       - '.github/workflows/test.yml'
@@ -35,7 +38,11 @@ jobs:
     name: Jest on Node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
       - uses: pnpm/action-setup@v2
+=======
+      - uses: pnpm/action-setup@v3
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -76,7 +83,11 @@ jobs:
     name: Jest puppeteer on Node ${{ matrix.node-version }} with ${{ matrix.chromium.name }}
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
       - uses: pnpm/action-setup@v2
+=======
+      - uses: pnpm/action-setup@v3
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -118,7 +129,11 @@ jobs:
     name: Build docs on Node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
       - uses: pnpm/action-setup@v2
+=======
+      - uses: pnpm/action-setup@v3
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -141,7 +156,11 @@ jobs:
     name: Build radar and maintainer on Node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
       - uses: pnpm/action-setup@v2
+=======
+      - uses: pnpm/action-setup@v3
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
         with:
           version: 8
       - uses: actions/setup-node@v4

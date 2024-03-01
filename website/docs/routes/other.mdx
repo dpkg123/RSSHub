@@ -121,7 +121,11 @@ See [#app-store-mac-app-store](/routes/program-update#app-store-mac-app-store)
 
 <Route author="DIYgod" example="/scmp/coronavirus" path="/scmp/coronavirus" />
 
+<<<<<<< HEAD
 ### Macao Pagina Electrónica Especial Contra Epidemias: What’s New {#corona-virus-disease-2019-macao-pagina-electronica-especial-contra-epidemias-what-s-new}
+=======
+### Macao Pagina Electrónica Especial Contra Epidemias: What’s New {#corona-virus-disease-2019-macao-pagina-electr%C3%B3nica-especial-contra-epidemias-what-s-new}
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 Official Website: [https://www.ssm.gov.mo/apps1/PreventWuhanInfection/en.aspx](https://www.ssm.gov.mo/apps1/PreventWuhanInfection/en.aspx)
 
@@ -424,6 +428,15 @@ It is recommended to use with clipping tools such as Notion Web Clipper.
 
 <Route author="miaoyafeng Fatpandac" example="/producthunt/today" path="/producthunt/today" />
 
+<<<<<<< HEAD
+=======
+## PwC Strategy& {#pwc-strategy}
+
+### Sustainability {#pwc-strategy-sustainability}
+
+<Route author="mintyfrankie" example="/pwc/strategyand/sustainability" path="/pwc/strategyand/sustainability" puppeteer="1" />
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## Remote.work {#remote-work}
 
 ### Remote.work Job Information {#remote-work-remote-work-job-information}
@@ -434,12 +447,25 @@ It is recommended to use with clipping tools such as Notion Web Clipper.
   |    all   | development | design | operation | product | other | marketing | sales |
 </Route>
 
+<<<<<<< HEAD
 ## Transformation {#transformation}
 
 Pass URL and transformation rules to convert HTML/JSON into RSS.
 
 ### HTML {#transformation-html}
 
+=======
+## RSSHub {#rsshub}
+
+### Internal Media Proxy {#rsshub-internal-media-proxy}
+
+<Route author="TonyRL" example="/rsshub/m/key/https%3A%2F%2Fdocs.rsshub.app%2Fimg%2Flogo.png" path="/rsshub/m/:key/:url" paramsDesc={['Media Proxy Key', '`encodeURIComponent`ed URL address']} configRequired="1" />
+
+### Transformation - HTML {#rsshub-transformation-html}
+
+Pass URL and transformation rules to convert HTML/JSON into RSS.
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 Specify options (in the format of query string) in parameter `routeParams` parameter to extract data from HTML.
 
 | Key               | Meaning                                                        | Accepted Values | Default                |
@@ -470,7 +496,11 @@ Specify options (in the format of query string) in parameter `routeParams` param
   | `item`    | `div[class='post-content'] p a` |
 </Route>
 
+<<<<<<< HEAD
 ### JSON {#transformation-json}
+=======
+### Transformation - JSON {#rsshub-transformation-json}
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 Specify options (in the format of query string) in parameter `routeParams` parameter to extract data from JSON.
 
@@ -505,7 +535,11 @@ JSON Path only supports format like `a.b.c`. if you need to access arrays, like 
   | `itemDesc`  | `body`          |
 </Route>
 
+<<<<<<< HEAD
 ### Sitemap {#transformation-sitemap}
+=======
+### Transformation - Sitemap {#rsshub-transformation-sitemap}
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 Specify options (in the format of query string) in parameter `routeParams` parameter to extract data from Sitemap. (Follows Sitemap Protocol 0.9)
 
@@ -522,6 +556,19 @@ Specify options (in the format of query string) in parameter `routeParams` param
   | `routeParams` | `title=Example`                        |
 </Route>
 
+<<<<<<< HEAD
+=======
+## TV Tropes {#tv-tropes}
+
+### Featured {#tv-tropes-featured}
+
+<Route author="nczitzk" example="/tvtropes/featured/today" path="/tvtropes/featured/:category?" paramsDesc={['Category, see below, Today\'s Featured Trope by default']} radar="1">
+  | Today's Featured Trope | Newest Trope |
+  | ---------------------- | ------------ |
+  | today                  | newest       |
+</Route>
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## Urban Dictionary {#urban-dictionary}
 
 ### Random words {#urban-dictionary-random-words}
@@ -568,6 +615,21 @@ Specify options (in the format of query string) in parameter `routeParams` param
   Refer to [the list of supported currencies](https://wise.com/tools/exchange-rate-alerts/).
 </Route>
 
+<<<<<<< HEAD
+=======
+## World Meteorological Centre Beijing {#world-meteorological-centre-beijing}
+
+### Publish {#world-meteorological-centre-beijing-publish}
+
+<Route author="nczitzk" example="/wmc-bj/publish/CRA-Reanalysis/2m-Temperature/6-hour/index.html" path="/wmc-bj/publish/:category?" paramsDesc={['Category, can be found in URL, `CRA-Reanalysis/2m-Temperature/6-hour/index.html` by default']} radar="1">
+  :::tip
+  `category` is the text after `publish/` in the URL.
+
+  eg. The URL for [Monitoring\_CMA-RA\_2m-Temperature\_6-hour](http://www.wmc-bj.net/publish/CRA-Reanalysis/2m-Temperature/6-hour/index.html) is [http://www.wmc-bj.net/publish/CRA-Reanalysis/2m-Temperature/6-hour/index.html](http://www.wmc-bj.net/publish/CRA-Reanalysis/2m-Temperature/6-hour/index.html). The `category` for route can be represented as [`/wmc-bj/publish/CRA-Reanalysis/2m-Temperature/6-hour/index.html`](https://rsshub.app/wmc-bj/publish/CRA-Reanalysis/2m-Temperature/6-hour/index.html).
+  :::
+</Route>
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## 艾瑞 {#ai-rui}
 
 ### 产业研究报告 {#ai-rui-chan-ye-yan-jiu-bao-gao}
@@ -1181,6 +1243,19 @@ Specify options (in the format of query string) in parameter `routeParams` param
   | xxkd     | gzdt     | ztfx     |
 </Route>
 
+<<<<<<< HEAD
+=======
+## 中国兴业银行 {#zhong-guo-xing-ye-yin-hang}
+
+### 外汇牌价 {#zhong-guo-xing-ye-yin-hang-wai-hui-pai-jia}
+
+<Route author="Qixingchen" example="/cib/whpj/xh?filter_title=USD" path="/cib/whpj/:format?" paramsDesc={['输出的标题格式，默认为标题 + 所有价格。短格式仅包含货币名称。']}>
+  | 短格式 | 现汇买卖 | 现钞买卖 | 现汇买入 | 现汇卖出 | 现钞买入 | 现钞卖出 |
+  | ------ | -------- | -------- | -------- | -------- | -------- | -------- |
+  | short  | xh       | xc       | xhmr     | xhmc     | xcmr     | xcmc     |
+</Route>
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## 中国银行 {#zhong-guo-yin-hang}
 
 ### 外汇牌价 {#zhong-guo-yin-hang-wai-hui-pai-jia}

@@ -19,7 +19,11 @@
     "scrap_start_urls": false,
     "min_indexed_level": 1,
     "js_render": true,
+<<<<<<< HEAD
     "js_wait": 1,
+=======
+    "js_wait": 2,
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
     "custom_settings": {
         "displayedAttributes": [
             "hierarchy_radio_lvl1",

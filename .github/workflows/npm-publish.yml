@@ -9,7 +9,10 @@ on:
       - 'lib/**'
       - '!**/maintainer.js'
       - '!**/radar.js'
+<<<<<<< HEAD
       - '!**/radar-rules.js'
+=======
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 permissions:
   contents: read
@@ -25,7 +28,11 @@ jobs:
       HUSKY: 0
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
       - uses: pnpm/action-setup@v2
+=======
+      - uses: pnpm/action-setup@v3
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
         with:
           version: 8
       - uses: actions/setup-node@v4

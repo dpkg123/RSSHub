@@ -6,7 +6,11 @@ const { nodeFileTrace } = require('@vercel/nft');
 
 const projectRoot = path.resolve(process.env.PROJECT_ROOT || path.join(__dirname, '../..'));
 const resultFolder = path.join(projectRoot, 'app-minimal'); // no need to resolve, ProjectRoot is always absolute
+<<<<<<< HEAD
 const files = ['lib/index.js', 'api/vercel.js'].map((file) => path.join(projectRoot, file));
+=======
+const files = ['lib/index.ts', 'api/vercel.js'].map((file) => path.join(projectRoot, file));
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 (async () => {
     console.log('Start analyzing, project root:', projectRoot);

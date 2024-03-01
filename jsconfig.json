@@ -2,8 +2,15 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+<<<<<<< HEAD
             "@/*": ["./lib/*"],
         },
     },
     "include": ["./lib/**/*"],
+=======
+            "@/*": ["./lib/*"]
+        }
+    },
+    "include": ["./lib/**/*"]
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 }

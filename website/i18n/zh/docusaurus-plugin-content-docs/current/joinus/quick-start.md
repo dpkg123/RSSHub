@@ -20,7 +20,11 @@ sidebar_position: 1
 -   [W3Schools](https://www.w3schools.com)
 -   [Codecademy 上的 Git 课程](https://www.codecademy.com/learn/learn-git)
 
+<<<<<<< HEAD
 如果您想查看其他开发人员如何使用这些技术来制作 RSS 订阅的示例，您可以查看 [我们的代码库](https://github.com/DIYgod/RSSHub/tree/master/lib/v2) 中的一些代码。
+=======
+如果您想查看其他开发人员如何使用这些技术来制作 RSS 订阅的示例，您可以查看 [我们的代码库](https://github.com/DIYgod/RSSHub/tree/master/lib/routes) 中的一些代码。
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ## 提交新的 RSSHub 规则
 

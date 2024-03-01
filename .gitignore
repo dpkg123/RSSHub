@@ -1,5 +1,9 @@
 .DS_Store
+<<<<<<< HEAD
 .env
+=======
+.env*
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 .eslintcache
 .idea
 .log
@@ -19,6 +23,10 @@ coverage
 docs/.vuepress/dist
 node_modules
 tmp
+<<<<<<< HEAD
+=======
+dist
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 Session.vim
 combined.log

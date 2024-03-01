@@ -76,7 +76,11 @@ npm run dev
 
 ## 创建命名空间
 
+<<<<<<< HEAD
 制作新的 RSS 路由的第一步是创建命名空间。命名空间应该与您制作 RSS 源的主要网站的二级域名**相同**。例如，如果您正在为 [https://github.com/DIYgod/RSSHub/issues](https://github.com/DIYgod/RSSHub/issues) 制作 RSS 源，第二级域名是 `github`。因此，您应该在 `lib/v2` 下创建名为 `github` 的文件夹，作为您的 RSS 路由的命名空间。
+=======
+制作新的 RSS 路由的第一步是创建命名空间。命名空间应该与您制作 RSS 源的主要网站的二级域名**相同**。例如，如果您正在为 [https://github.com/DIYgod/RSSHub/issues](https://github.com/DIYgod/RSSHub/issues) 制作 RSS 源，第二级域名是 `github`。因此，您应该在 `lib/routes` 下创建名为 `github` 的文件夹，作为您的 RSS 路由的命名空间。
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 :::tip
 
@@ -98,7 +102,11 @@ npm run dev
 ```js
 module.exports = (router) => {
     // highlight-next-line
+<<<<<<< HEAD
     router.get('/issue/:user/:repo?', require('./issue'));
+=======
+    router.get('/issue/:user/:repo?', './issue');
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 };
 ```
 
@@ -108,13 +116,18 @@ module.exports = (router) => {
 ```js
 module.exports = function (router) {
     // highlight-next-line
+<<<<<<< HEAD
     router.get('/issue/:user/:repo?', require('./issue'));
+=======
+    router.get('/issue/:user/:repo?', './issue');
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 };
 ```
 
 </TabItem>
 </Tabs>
 
+<<<<<<< HEAD
 在 `router.js` 中注册您的新 RSS 路由时，您可以定义路由路径并指定要执行的相应函数。在上面的代码中，`router.get()` 方法用于指定新的 RSS 路由的 HTTP 方法和路径。`router.get()` 的第一个参数是使用 [path-to-regexp](https://github.com/pillarjs/path-to-regexp) 语法的路由路径。第二个参数是您新的 RSS 规则 `issue.js` 中导出的函数。您可以省略 `.js` 扩展名。
 
 在上面的示例中，`issue` 是一个精确匹配，`:user` 是一个必需参数，`:repo?` 是一个可选参数。`?` 在 `:repo` 之后表示该参数是可选的。如果用户没有输入仓库名，则会返回到您代码中指定的内容（这里是 `RSSHub`）。
@@ -128,6 +141,17 @@ module.exports = function (router) {
 :::tip
 
 有关 `router` 的更高级用法，请参阅 [@koa/router API 参考文档](https://github.com/koajs/router/blob/master/API.md)。
+=======
+在 `router.js` 中注册您的新 RSS 路由时，您可以定义路由路径并指定要执行的相应函数。在上面的代码中，`router.get()` 方法用于指定新的 RSS 路由的 HTTP 方法和路径。`router.get()` 的第一个参数是使用 [Hono 路由](https://hono.dev/api/routing) 语法的路由路径。第二个参数是您新的 RSS 规则 `issue.js` 的相对路径。您可以省略 `.js` 扩展名。
+
+在上面的示例中，`issue` 是一个精确匹配，`:user` 是一个必需参数，`:repo?` 是一个可选参数。`?` 在 `:repo` 之后表示该参数是可选的。如果用户没有输入仓库名，则会返回到您代码中指定的内容（这里是 `RSSHub`）。
+
+一旦您定义了路由路径，您可以从 [`ctx.req.param()`](https://hono.dev/api/request#param) 方法中获取参数的值。例如，如果用户访问了 `/github/issue/DIYgod/RSSHub`，您可以分别从 `ctx.req.param('user')` 和 `ctx.req.param('repo')` 中获取 `user` 和 `repo` 的值。例如，如果用户访问了 `/github/issue/DIYgod/RSSHub`，则 `ctx.req.param('user')` 和 `ctx.req.param('repo')` 将分别为 `DIYgod` 和 `RSSHub`。
+
+:::tip
+
+有关 `router` 的更高级用法，请参阅 [Hono Routing API 参考文档](https://hono.dev/api/routing)。
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 :::
 

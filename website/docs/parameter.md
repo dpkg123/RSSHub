@@ -149,7 +149,11 @@ E.g.
 
 ### debug.json
 
+<<<<<<< HEAD
 If the RSSHub instance is running with `debugInfo=true` enabled, suffixing a route with `.debug.json` will result in the value of `ctx.state.json` being returned.
+=======
+If the RSSHub instance is running with `debugInfo=true` enabled, suffixing a route with `.debug.json` will result in the value of `ctx.set('json', obj)` being returned.
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 This feature aims to facilitate debugging or developing customized features. A route developer has the freedom to determine whether to adopt it or not, without any format requirement.
 
@@ -159,7 +163,11 @@ For example：
 
 ### debug.html
 
+<<<<<<< HEAD
 By adding `.{index}.debug.html` (where `{index}` is a number starting from 0) at the end of the route and running the instance with `debugInfo=true`, RSSHub will return the content set in the plugin's `ctx.state.data.item[index].description`. You can access this page with a browser to quickly view the extracted information.
+=======
+By adding `.{index}.debug.html` (where `{index}` is a number starting from 0) at the end of the route and running the instance with `debugInfo=true`, RSSHub will return the content set in the plugin's `data.item[index].description`. You can access this page with a browser to quickly view the extracted information.
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 Example:
 

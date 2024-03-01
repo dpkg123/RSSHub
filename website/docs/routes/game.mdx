@@ -18,6 +18,7 @@
   | news | gl   | resource |
 </Route>
 
+<<<<<<< HEAD
 ## 4Gamers 新闻 {#4gamers-xin-wen}
 
 ### 分类 {#4gamers-xin-wen-fen-lei}
@@ -31,6 +32,25 @@
 ### 主題 {#4gamers-xin-wen-zhu-ti}
 
 <Route author="bestpika" example="/4gamers/topic/gentlemen-topic" path="/4gamers/topic/:topic" paramsDesc={['主题, 可在首页上方页面内找到']} />
+=======
+## 4Gamers {#4gamers}
+
+### 最新消息 {#4gamers-zui-xin-xiao-xi}
+
+<Route author="TonyRL" example="/4gamers" path="/4gamers" radar="1" />
+
+### 分类 {#4gamers-fen-lei}
+
+<Route author="hoilc" example="/4gamers/category/352" path="/4gamers/category/:category" paramsDesc={['分类 ID，可从分类 URL 中找到']} radar="1" />
+
+### 标签 {#4gamers-biao-qian}
+
+<Route author="hoilc" example="/4gamers/tag/限時免費" path="/4gamers/tag/:tag" paramsDesc={['标签名，可在标签 URL 中找到']} radar="1" />
+
+### 主題 {#4gamers-zhu-ti}
+
+<Route author="bestpika" example="/4gamers/topic/gentlemen-topic" path="/4gamers/topic/:topic" paramsDesc={['主题，可在首页上方页面内找到']} radar="1" />
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ## 5EPLAY {#5eplay}
 
@@ -265,11 +285,75 @@
   | 1       | 2      | 3    |
 </Route>
 
+<<<<<<< HEAD
 ## Indienova {#indienova}
 
 ### indienova 文章 {#indienova-indienova-wen-zhang}
 
 <Route author="GensouSakuya kt286" example="/indienova/article" path="indienova/:type" paramsDesc={['类型: `article` 文章，`development` 开发']} />
+=======
+## indienova 独立游戏 {#indienova-du-li-you-xi}
+
+### 文章 {#indienova-du-li-you-xi-wen-zhang}
+
+<Route author="GensouSakuya kt286" example="/indienova/article" path="indienova/:type" paramsDesc={['类型: `article` 文章，`development` 开发']} radar="1" />
+
+### 专题 {#indienova-du-li-you-xi-zhuan-ti}
+
+<Route author="TonyRL" example="/indienova/column/52" path="/indienova/column/:columnId" paramsDesc={['专题 ID，可在 URL中找到']} radar="1">
+  <details>
+    <summary>专题 ID</summary>
+
+    游戏推荐
+
+    | itch 一周游戏汇 | 一周值得关注的发售作品 | 诺娃速递 | 周末游戏视频集锦 | 每月媒体评分 | 年度最佳游戏 | Indie Focus 近期新游 | indienova Picks 精选 |
+    | --------------- | ---------------------- | -------- | ---------------- | ------------ | ------------ | -------------------- | -------------------- |
+    | 52              | 29                     | 41       | 43               | 45           | 39           | 1                    | 8                    |
+
+    游戏评论
+
+    | 游必有方 Podcast | 独立游戏潮（RED） |
+    | ---------------- | ----------------- |
+    | 6                | 3                 |
+
+    游戏开发
+
+    | 游戏设计模式 | Roguelike 开发 | GMS 中文教程 |
+    | ------------ | -------------- | ------------ |
+    | 15           | 14             | 7            |
+
+    游戏设计
+
+    | 游戏与所有 | 让人眼前一亮的游戏设计 | 游戏音乐分析 | 游戏情感设计 | 游戏相关书籍 | 游戏设计课程笔记 | 游戏设计工具 | 游戏设计灵感 | 设计师谈设计 | 游戏研究方法 | 功能游戏 | 游戏设计专业院校 | 像素课堂 |
+    | ---------- | ---------------------- | ------------ | ------------ | ------------ | ---------------- | ------------ | ------------ | ------------ | ------------ | -------- | ---------------- | -------- |
+    | 10         | 33                     | 17           | 4            | 22           | 11               | 24           | 26           | 27           | 28           | 38       | 9                | 19       |
+
+    游戏文化
+
+    | NOVA 海外独立游戏见闻 | 工作室访谈 | indie Figure 游戏人 | 游戏艺术家 | 独立游戏音乐欣赏 | 游戏瑰宝 | 电脑 RPG 游戏史 | ALT. CTRL. GAMING |
+    | --------------------- | ---------- | ------------------- | ---------- | ---------------- | -------- | --------------- | ----------------- |
+    | 53                    | 23         | 5                   | 44         | 18               | 21       | 16              | 2                 |
+
+    Game Jam
+
+    | Ludum Dare | Global Game Jam |
+    | ---------- | --------------- |
+    | 31         | 13              |
+  </details>
+</Route>
+
+### GameDB 游戏库 {#indienova-du-li-you-xi-gamedb-you-xi-ku}
+
+<Route author="TonyRL" example="/indienova/gamedb/recent" path="/indienova/gamedb/recent/:platform?" paramsDesc={['平台，见下表，留空为 `all`']} radar="1">
+  | 全部 | PS4 | XBOX One | Nintendo Switch |
+  | ---- | --- | -------- | --------------- |
+  | all  | ps4 | xboxone  | nintendo-switch |
+</Route>
+
+### 会员开发游戏库 {#indienova-du-li-you-xi-hui-yuan-kai-fa-you-xi-ku}
+
+<Route author="TonyRL" example="/indienova/usergames" path="/indienova/usergames" radar="1" />
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ## itch.io {#itch-io}
 
@@ -341,6 +425,7 @@
 
 ### Project versions {#modrinth-project-versions}
 
+<<<<<<< HEAD
 <Route author="SettingDust" example="/project/modrinth/sodium/versions" path="/project/modrinth/:id/versions" paramsDesc={['Id or slug of the Modrinth project']} radar="1" />
 
 Addition query parameters
@@ -350,6 +435,15 @@ Addition query parameters
 | loaders        | ?loaders=fabric\&loaders=quilt\&loaders=forge |
 | game\_versions | ?game\_versions=1.20.1\&game\_versions=1.20.2 |
 | featured       | ?featured=true                                |
+=======
+<Route author="SettingDust" example="/modrinth/project/sodium/versions" path="/modrinth/project/:id/versions/:routeParams?" paramsDesc={['Id or slug of the Modrinth project','Extra route params. See the table below for options']} radar="1" />
+
+| Name           | Example                                      |
+| -------------- | -------------------------------------------- |
+| loaders        | loaders=fabric\&loaders=quilt\&loaders=forge |
+| game\_versions | game\_versions=1.20.1\&game\_versions=1.20.2 |
+| featured       | featured=true                                |
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ## Nintendo {#nintendo}
 
@@ -373,9 +467,15 @@ Addition query parameters
 
 <Route author="hoilc" example="/nintendo/system-update" path="/nintendo/system-update" />
 
+<<<<<<< HEAD
 ## osu! {#osu!}
 
 ### Beatmap Packs {#osu!-beatmap-packs}
+=======
+## osu! {#osu}
+
+### Beatmap Packs {#osu-beatmap-packs}
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 <Route author="JimenezLi" example="/osu/packs" path="/osu/packs/:type?" paramsDesc={['pack type, default to `standard`, can choose from `featured`, `tournament`, `loved`, `chart`, `theme` and `artist`']} radar="1" />
 
@@ -389,6 +489,7 @@ Addition query parameters
 
 <Route author="justjustCC" example="/ps/monthly-games" path="/ps/monthly-games" />
 
+<<<<<<< HEAD
 ## psnine {#psnine}
 
 ### 首页 - 白金攻略 / 游戏开箱 {#psnine-shou-ye-bai-jin-gong-lve-you-xi-kai-xiang}
@@ -396,6 +497,29 @@ Addition query parameters
 <Route author="LightStrawberry" example="/psnine/index" path="/psnine/index" />
 
 ### 节点 {#psnine-jie-dian}
+=======
+## PRINCESS CONNECT! Re Dive プリンセスコネクト！Re Dive {#princess-connect-re-dive-%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BB%E3%82%B9%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88%EF%BC%81re-dive}
+
+### 日服公告 {#princess-connect-re-dive-%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BB%E3%82%B9%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88%EF%BC%81re-dive-ri-fu-gong-gao}
+
+<Route author="SayaSS" example="/priconne-redive/news" path="/priconne-redive/news" radar="1" />
+
+### 台服公告 {#princess-connect-re-dive-%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BB%E3%82%B9%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88%EF%BC%81re-dive-tai-fu-gong-gao}
+
+<Route author="hoilc" example="/pcr/news-tw" path="/pcr/news-tw" />
+
+### 国服公告 {#princess-connect-re-dive-%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BB%E3%82%B9%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88%EF%BC%81re-dive-guo-fu-gong-gao}
+
+<Route author="KotoriK" example="/pcr/news-cn" path="/pcr/news-cn" />
+
+## PSN 中文站 {#psn-zhong-wen-zhan}
+
+### 首页 - 白金攻略 / 游戏开箱 {#psn-zhong-wen-zhan-shou-ye-bai-jin-gong-lve-you-xi-kai-xiang}
+
+<Route author="LightStrawberry" example="/psnine/index" path="/psnine/index" />
+
+### 节点 {#psn-zhong-wen-zhan-jie-dian}
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 <Route author="nczitzk" example="/psnine/node/news" path="/psnine/node/:id?/:order?" paramsDesc={['节点 id，见下表，默认为 news', '排序，可选 `date` 即最新，默认为 `obdate` 即综合排序']}>
   | 站务 | 活动  | 旅记   | 折扣 | 会免 |
@@ -415,6 +539,7 @@ Addition query parameters
   | famitsu | ign | ucg |
 </Route>
 
+<<<<<<< HEAD
 ### 数折 - 折扣信息推送 {#psnine-shu-zhe-zhe-kou-xin-xi-tui-song}
 
 <Route author="LightStrawberry" example="/psnine/shuzhe" path="/psnine/shuzhe" />
@@ -424,6 +549,17 @@ Addition query parameters
 <Route author="LightStrawberry" example="/psnine/trade" path="/psnine/trade" />
 
 ### 游戏 - 新游戏奖杯信息 {#psnine-you-xi-xin-you-xi-jiang-bei-xin-xi}
+=======
+### 数折 - 折扣信息推送 {#psn-zhong-wen-zhan-shu-zhe-zhe-kou-xin-xi-tui-song}
+
+<Route author="LightStrawberry" example="/psnine/shuzhe" path="/psnine/shuzhe" />
+
+### 闲游 - 二手盘信息 {#psn-zhong-wen-zhan-xian-you-er-shou-pan-xin-xi}
+
+<Route author="LightStrawberry" example="/psnine/trade" path="/psnine/trade" />
+
+### 游戏 - 新游戏奖杯信息 {#psn-zhong-wen-zhan-you-xi-xin-you-xi-jiang-bei-xin-xi}
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 <Route author="LightStrawberry" example="/psnine/game" path="/psnine/game" />
 
@@ -582,6 +718,7 @@ Due to the regional restrictions, an RSSHub deployment in China Mainland may not
 
 <Route author="wushijishan" example="/diershoubing/news" path="/diershoubing/news" />
 
+<<<<<<< HEAD
 ## 公主链接 {#gong-zhu-lian-jie}
 
 ### 日服公告 {#gong-zhu-lian-jie-ri-fu-gong-gao}
@@ -596,6 +733,8 @@ Due to the regional restrictions, an RSSHub deployment in China Mainland may not
 
 <Route author="KotoriK" example="/pcr/news-cn" path="/pcr/news-cn" />
 
+=======
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## 怪物猎人世界 {#guai-wu-lie-ren-shi-jie}
 
 ### 更新情报 {#guai-wu-lie-ren-shi-jie-geng-xin-qing-bao}
@@ -737,6 +876,17 @@ Example：`https://www.iyingdi.com/tz/people/55547` ，id 是 `55547`
 
 <Route author="CaoMeiYouRen" example="/mihoyo/bbs/user-post/77005350" path="/mihoyo/bbs/user-post/:uid" paramsDesc={['用户uid']} radar="1" />
 
+<<<<<<< HEAD
+=======
+### 米游社 - 用户关注动态 {#mi-ha-you-mi-you-she-yong-hu-guan-zhu-dong-tai}
+
+<Route author="CaoMeiYouRen" example="/mihoyo/bbs/timeline" path="/mihoyo/bbs/timeline" radar="1" configRequired="1">
+  :::warning
+  用户关注动态需要米游社登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。
+  :::
+</Route>
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ### 原神 {#mi-ha-you-yuan-shen}
 
 #### 新闻 {#mi-ha-you-yuan-shen-xin-wen}
@@ -821,6 +971,19 @@ Example：`https://www.iyingdi.com/tz/people/55547` ，id 是 `55547`
 
 <Route author="15x15G" example="/pjsk/news" path="/pjsk/news" />
 
+<<<<<<< HEAD
+=======
+## 完美世界电竞 {#wan-mei-shi-jie-dian-jing}
+
+### 资讯列表 {#wan-mei-shi-jie-dian-jing-zi-xun-lie-biao}
+
+<Route author="tssujt" example="/wmpvp/news/1" path="/wmpvp/news/:type" paramsDesc={['资讯分类，见下表']}>
+  | DOTA2 | CS2 |
+  | ----- | --- |
+  | 1     | 2   |
+</Route>
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## 王者荣耀 {#wang-zhe-rong-yao}
 
 ### 新闻中心 {#wang-zhe-rong-yao-xin-wen-zhong-xin}

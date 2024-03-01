@@ -209,7 +209,11 @@ It is also valid to contain route parameters, e.g. `/weibo/user/2612249974`.
 
 ## Features
 
+<<<<<<< HEAD
 :::tip Experimental features
+=======
+:::tip[Experimental features]
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 Configs in this sections are in beta stage, and **are turn off by default**. Please read corresponded description and turn on if necessary.
 
@@ -221,6 +225,11 @@ Configs in this sections are in beta stage, and **are turn off by default**. Ple
 
 `ALLOW_USER_SUPPLY_UNSAFE_DOMAIN`: allow users to provide a domain as a parameter to routes that are not in their allow list, respectively. Public instances are suggested to leave this value default, as it may lead to [Server-Side Request Forgery (SSRF)](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery)
 
+<<<<<<< HEAD
+=======
+`MEDIA_PROXY_KEY`: the access key for internal media proxy.
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ## Other Application Configurations
 
 `DISALLOW_ROBOT`: prevent indexing by search engine, default to enable, set false or 0 to disable
@@ -478,13 +487,28 @@ For scientific journal routes
 
 For user data related routes
 
+<<<<<<< HEAD
 -   `SPOTIFY_REFRESHTOKEN`: The refresh token of the user from the Spotify application. Check [this gist](https://gist.github.com/outloudvi/d1bbeb5e989db5385384a223a7263744) for detailed information.
+=======
+-   `SPOTIFY_REFRESHTOKEN`: The refresh token of the user from the Spotify application. You can obtain it through [spotify-refresh-token](https://alecchen.dev/spotify-refresh-token/) by [alecchendev](https://github.com/alecchendev/spotify-refresh-token).
+
+:::tip
+
+Remember to check `user-top-read` and `user-library-read` in the scope for `Personal Top Items` and `Personal Saved Tracks` respectively.
+
+:::
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ### Telegram
 
 [Bot application](https://telegram.org/blog/bot-revolution)
 
+<<<<<<< HEAD
 -   `TELEGRAM_TOKEN`: Telegram bot token
+=======
+-   `TELEGRAM_TOKEN`: Telegram bot token for stickerpack feeds
+-   `TELEGRAM_SESSION`: for video and file streaming, can be acquired by running `node lib/routes/telegram/tglib/client.js`
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 ### Twitter
 
@@ -570,6 +594,13 @@ Web 版认证 token 和 iOS 内购回执认证 token 只需选择其一填入即
 
 -   `HEFENG_KEY`:API key
 
+<<<<<<< HEAD
+=======
+### 米游社
+
+-   `MIHOYO_COOKIE`：登录米游社后的 cookie，用于获取用户关注动态时间线。
+
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 ### 南方周末
 
 用于付费全文

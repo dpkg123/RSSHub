@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 FROM node:20-bookworm AS dep-builder
+=======
+FROM node:21-bookworm AS dep-builder
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 # Here we use the non-slim image to provide build-time deps (compilers and python), thus no need to install later.
 # This effectively speeds up qemu-based cross-build.
 
@@ -15,6 +19,10 @@ RUN \
         pnpm config set registry https://registry.npmmirror.com ; \
     fi;
 
+<<<<<<< HEAD
+=======
+COPY ./tsconfig.json /app/
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 COPY ./pnpm-lock.yaml /app/
 COPY ./package.json /app/
 
@@ -23,7 +31,11 @@ RUN \
     set -ex && \
     export PUPPETEER_SKIP_DOWNLOAD=true && \
     corepack enable pnpm && \
+<<<<<<< HEAD
     pnpm install --prod --frozen-lockfile && \
+=======
+    pnpm install --frozen-lockfile && \
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
     pnpm rb
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -32,7 +44,11 @@ FROM debian:bookworm-slim AS dep-version-parser
 # This stage is necessary to limit the cache miss scope.
 # With this stage, any modification to package.json won't break the build cache of the next two stages as long as the
 # version unchanged.
+<<<<<<< HEAD
 # node:20-bookworm-slim is based on debian:bookworm-slim so this stage would not cause any additional download.
+=======
+# node:21-bookworm-slim is based on debian:bookworm-slim so this stage would not cause any additional download.
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 WORKDIR /ver
 COPY ./package.json /app/
@@ -44,12 +60,17 @@ RUN \
 
 # ---------------------------------------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 FROM node:20-bookworm-slim AS docker-minifier
+=======
+FROM node:21-bookworm-slim AS docker-minifier
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 # The stage is used to further reduce the image size by removing unused files.
 
 WORKDIR /minifier
 COPY --from=dep-version-parser /ver/* /minifier/
 
+<<<<<<< HEAD
 ARG USE_CHINA_NPM_REGISTRY=0
 RUN \
     set -ex && \
@@ -60,24 +81,49 @@ RUN \
     fi; \
     corepack enable pnpm && \
     pnpm add @vercel/nft@$(cat .nft_version) fs-extra@$(cat .fs_extra_version) --save-prod
+=======
+# ARG USE_CHINA_NPM_REGISTRY=0
+# RUN \
+#     set -ex && \
+#     if [ "$USE_CHINA_NPM_REGISTRY" = 1 ]; then \
+#         npm config set registry https://registry.npmmirror.com && \
+#         yarn config set registry https://registry.npmmirror.com && \
+#         pnpm config set registry https://registry.npmmirror.com ; \
+#     fi; \
+#     corepack enable pnpm && \
+#     pnpm add @vercel/nft@$(cat .nft_version) fs-extra@$(cat .fs_extra_version) --save-prod
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 COPY . /app
 COPY --from=dep-builder /app /app
 
 RUN \
     set -ex && \
+<<<<<<< HEAD
     cp /app/scripts/docker/minify-docker.js /minifier/ && \
     export PROJECT_ROOT=/app && \
     node /minifier/minify-docker.js && \
     rm -rf /app/node_modules /app/scripts && \
     mv /app/app-minimal/node_modules /app/ && \
     rm -rf /app/app-minimal && \
+=======
+    # cp /app/scripts/docker/minify-docker.js /minifier/ && \
+    # export PROJECT_ROOT=/app && \
+    # node /minifier/minify-docker.js && \
+    # rm -rf /app/node_modules /app/scripts && \
+    # mv /app/app-minimal/node_modules /app/ && \
+    # rm -rf /app/app-minimal && \
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
     ls -la /app && \
     du -hd1 /app
 
 # ---------------------------------------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 FROM node:20-bookworm-slim AS chromium-downloader
+=======
+FROM node:21-bookworm-slim AS chromium-downloader
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 # This stage is necessary to improve build concurrency and minimize the image size.
 # Yeah, downloading Chromium never needs those dependencies below.
 
@@ -109,7 +155,11 @@ RUN \
 
 # ---------------------------------------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 FROM node:20-bookworm-slim AS app
+=======
+FROM node:21-bookworm-slim AS app
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
 
 LABEL org.opencontainers.image.authors="https://github.com/DIYgod/RSSHub"
 

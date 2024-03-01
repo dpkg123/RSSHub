@@ -43,5 +43,9 @@ vercel.json
 .git/hooks
 
 # rsshub auxiliary files
+<<<<<<< HEAD
 lib/radar-rules.js
 lib/v2/**/radar.js
+=======
+lib/routes/**/radar.js
+>>>>>>> 7ddf992fa7aab3d9ca976af8003f7771d3c3b35f
